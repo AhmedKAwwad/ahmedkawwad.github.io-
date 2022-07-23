@@ -1,0 +1,102 @@
+# section information
+section:
+  name: Experience
+  id: experiences
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: Udacity & ITIDA.
+    url: "https://www.udacity.com/course/security-engineer-nanodegree--nd698"
+    location: Online.
+    overview: Udacity Cyber Security Engineer Nanodegree Expert level in the Egypt FWD program ITIDA.
+  positions:
+  - designation: Cyber Security Engineer
+    start: July 2022
+    end: Present
+    responsibilities:
+      - Security Engineering Fundamentals
+      - System Security
+      - Infrastructure Security
+      - Application Security
+
+- company:
+    name: Virtually Testing Foundation
+    url: "https://virtuallytesting.com/"
+    location: Online
+    overview: Virtually Testing is a California, USA based 501(c)3 nonprofit organization. Our mission is to serve a cybersecurity-focused community by organizing speaker events, hands-on workshops, conferences, etc.
+  positions:
+  - designation: Intern Cyber Security Engineer
+    start: May 2022
+    end: July 2022
+    responsibilities:
+      - Red Team, Blue Team and Purple Team.
+      - Splunk, Mitre Att&ck, OSINT
+      - Pfsense, OS, Security, Cloud Computing.
+      - OWASP 10, Nmap, Metasploit 
+      - Passive & Active Reconnaissance
+- company:
+    name: Penetration Testing Intern
+    # url: "https://www.trendmicro.com/"
+    location: TrendMicro & Cybertalents
+    # company overview
+    overview: Scholarship by TrendMicro & Cybertalents.
+  positions:
+  - designation: Ethical Hacking
+    start: Jun 2021 
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    end: Jul 2021
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Learned different topics in network pentesting including
+      reconnaissance, exploitation, privilege escalation Linux and Windows, pivoting and tunneling
+    - Operating with Frameworks like
+      - Metasploit and Armitage
+
+  - designation: Web Security
+    start: Jul 2021
+    end: Aug 2021
+    responsibilities:
+    - Dived deep into OWASP top 10 vulnerabilities with different techniques of exploitation and remediation.
+    - Among the top 10 in the web security and penetration testing evaluation CTF.
+
+- company:
+    name: Udacity
+    url: "https://www.udacity.com/"
+    location: Online
+    overview: Accepted in “Google Developer Challenge” Scholarship and "One million Arab" Program on Udacity platform.
+  positions:
+  - designation: Full Stack Web Developer
+    start: March 2016
+    end: May 2017
+    responsibilities:
+    - Write lots of example codes.
+    - Read lots of examples.
+    - See lots of example videos.
+  - designation: Front-End Web Developer
+    start: March 2016
+    end: May 2017
+    responsibilities:
+    - Write lots of example codes.
+    - Read lots of examples.
+    - See lots of example videos.
+
+
+- company:
+    name: ExcelCode
+    url: "https://excelcodes.com/en/"
+    location: Cairo,Egypt
+    overview: ExcelCode company  is responsible for software and web development solutions.
+  positions:
+  - designation: Intern Back-End Developer
+    start: Sep 2017
+    end: Dec 2017
+    responsibilities:
+    - Django back-End developer .
+    - Testing indivadual functions and fix them.
+    - Deliver client needs in web development.

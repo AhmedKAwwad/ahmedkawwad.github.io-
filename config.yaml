@@ -1,0 +1,70 @@
+baseURL: https://ahmedkawwad.github.io
+
+languageCode: en-us
+title: "Awwad's Blog"
+theme: "toha"
+
+# Manage languages
+# For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
+languages:
+  en:
+    languageName: English
+    weight: 1
+
+# Control TOC depth
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: true
+
+# Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
+# DefaultContentLanguage: bn
+
+# # Allow raw html in markdown file
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true
+#   tableOfContents:
+#     startLevel: 2
+#     endLevel: 6
+#     ordered: false
+
+# At least HTML and JSON are required for the main HTML content and
+# client-side JavaScript search
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+
+# Enable global emoji support
+enableEmoji: true
+
+# Site parameters
+params:
+  darkMode:
+    enable: true
+    provider: darkreader
+    default: system
+  # GitHub repo URL of your site
+  gitRepo: https://github.com/AhmedKAwwad/ahmedkawwad.github.io
+  gitBranch: source
+  background: /images/cover.jpg
+  logo:
+    main: images/site/k-icon-invert.png
+    inverted: images/site/k-icon-invert.png
+    favicon: images/site/k-icon-invert.png
+
+
+  # specify whether you want to write some blog posts or not
+  enableBlogPost: true
+
+  # specify whether you want to show Table of Contents in reading page
+  enableTOC: true
+
+  # Provide newsletter configuration. This feature hasn't been implemented yet.
+  # Currently, you can just hide it from the footer.
+  newsletter:
+    enable: false

@@ -1,0 +1,26 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 5
+  showOnNavbar: false
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+- name: Secondary School Certificate
+  icon: fa-school
+  timeframe: 2014-2016
+  institution:
+    name: Ahmed Esmat expermintal language school
+  grade:
+    scale: Degree
+    achieved: 94
+    outOf: 100
+- name: Faculty of Engineering, Helwan university. 
+  icon: fa-solid fa-microchip
+  timeframe: 2016-2022
+  institution:
+    name: Communication and Electronics

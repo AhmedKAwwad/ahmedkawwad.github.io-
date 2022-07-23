@@ -1,0 +1,41 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Linux
+  logo: /images/skills/linux.png
+  summary: "Capable of used in writing bash/shell scripts and pentesting."
+
+- name: Python
+  logo: /images/skills/python.png
+  summary: "scripting and performing any automated tools needed in security operation."
+
+- name: Git
+  logo: /images/skills/git.png
+  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  url: "https://git-scm.com/"
+
+- name: C++
+  logo: /images/skills/c++.png
+  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+
+- name: Burpsuite
+  logo: /images/skills/burpsuite.png
+  summary: "Performing security testing of web applications."
+
+- name: Research & Development
+  logo: /images/skills/RD.png
+  summary: "Performing security researches of certain problems and try to find solutions or develope existed ones."
+
+- name: Offline Sandboxing
+  logo: /images/skills/sandbox.png
+  summary: "Install and integrate offline Sandboxing opensource for malware analysis to can detect and report their malicious activities , dump memory and Screenshot their activities on sandbox guest operating system ."

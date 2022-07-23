@@ -1,0 +1,27 @@
+# section information
+section:
+  name: Achievements
+  id: achievements
+  enable: false
+  weight: 8
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your achievements achievements
+achievements:
+- title: Github Stats
+  image: /images/sections/achievements/stats.png
+  # url: "https://github-readme-stats.vercel.app/api?username=AhmedKAwwad&show_icons=true&theme=gotham"
+  summary: Best presenter in the 2020 XYZ conference.
+- title: Most Languages
+  image: /images/sections/achievements/top-langs.png
+  # url: "https://github-readme-stats.vercel.app/api/top-langs?username=AhmedKAwwad&show_icons=true"
+  summary: Champion in cycling inter-city cycling championship 2020.
+# - title: Graduation
+#   image: /images/sections/achievements/graduation-cap.jpg
+#   summary: Received Bachelor of Science (B.Sc.) in Computer Science and Engineer from XYZ University.
+- title: Streaks
+  image: /images/sections/achievements/streaks.png
+  # url: "https://github-readme-streak-stats.herokuapp.com/?user=ahmedkawwad&show_icons=true"
+  summary: Wined best paper award at IEE Conference 2020.

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Squirrel writeup</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/site/k-icon-invert_hu853d0774892b5f84d30746ce0d4103bc_12477_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="Squirrel writeup" />
+<meta property="og:description" content="Digging with eagle eye" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ahmedkawwad.github.io/posts/writeups/squirrel/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-18T02:01:38+06:00" />
+<meta property="article:modified_time" content="2022-03-18T02:01:38+06:00" />
+
+
+
+    
+    
+<meta name="description" content="Digging with eagle eye" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/site/k-icon-invert_hu853d0774892b5f84d30746ce0d4103bc_12477_42x0_resize_box_3.png" alt="Logo">
+      Awwad&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/site/k-icon-invert_hu853d0774892b5f84d30746ce0d4103bc_12477_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/site/k-icon-invert_hu853d0774892b5f84d30746ce0d4103bc_12477_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writeups/">Write ups</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/writeups/email/" title="Email Address">Email Address</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/writeups/equation/" title="Equat1on">Equat1on</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/writeups/squirrel/" title="Squirrel">Squirrel</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/posts/writeups/squirrel/hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/avatar3_huf5636dc089c392d128deee48ab1cfda5_92383_120x120_fit_q75_box.jpg' alt="Author Image">
+          <h5 class="author-name">Ahmed Khaled A. Awwad</h5>
+          <p>Friday, March 18, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>Squirrel writeup</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h1 id="zain-ctf-2022--cybertalents">Zain CTF 2022 — Cybertalents</h1>
+<p>Category: Digital Forensics</p>
+<p>Description : a picture tells a story. search for more details</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Squirrel.zip<!-- raw HTML omitted --></p>
+<p>The download link is a zipped file containing the squirrel image above. Once unzipped, I checked the file out.</p>
+<pre tabindex="0"><code>└─$ file squirrel.jpg
+squirrel.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 180x180, segment length 16
+</code></pre><p>Looks normal.
+let&rsquo;s check it&rsquo;s meta data of the file</p>
+<pre tabindex="0"><code>└─$ exiftool squirrel.jpg
+ExifTool Version Number         : 12.40
+File Name                       : squirrel.jpg
+Directory                       : .
+File Size                       : 412 KiB
+File Modification Date/Time     : 2022:03:18 16:57:18-04:00
+File Access Date/Time           : 2022:03:18 17:24:48-04:00
+File Inode Change Date/Time     : 2022:03:18 17:24:31-04:00
+File Permissions                : -rwxrw-rw-
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Resolution Unit                 : inches
+X Resolution                    : 180
+Y Resolution                    : 180
+Image Width                     : 640
+Image Height                    : 480
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:4:4 (1 1)
+Image Size                      : 640x480
+Megapixels                      : 0.307
+</code></pre><p>Looks normal too.. ok</p>
+<p>Let&rsquo;s check strings and it produces a ton of output.</p>
+<p>I find it’s easier to find any maybe .jpg /.zip or also any long strings maybe helpful</p>
+<p>for print any string include &ldquo;.jpg&rdquo;/&quot;.zip&quot; we use grep</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">strings</span> <span style="color:#a6e22e">squirrel</span>.<span style="color:#a6e22e">jpg</span>  <span style="color:#f92672">|</span> <span style="color:#a6e22e">grep</span> <span style="color:#e6db74">&#39;.jpg&#39;</span>
+</span></span></code></pre></div><p>for print any sequence of at least 15</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">strings</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">n</span> <span style="color:#ae81ff">15</span> <span style="color:#a6e22e">squirrel</span>.<span style="color:#a6e22e">jpg</span>
+</span></span></code></pre></div><p>Nothing with .jpg but BOOM.
+either with &ldquo;.zip&rdquo; or long strings</p>
+<pre tabindex="0"><code>└─$ strings -n 15 squirrel.jpg                           
+ioncfvl/kdal/je
+afgnbvikmjkwvasbf7dw es 6qtntekias dteewf.zas/ddsas.......
+https://www.mediafire.com/file/yuy6pf4pj3004em/iamnotreal.zip/file
+cellTextIsHTMLbool
+ESliceHorzAlign
+ESliceVertAlign
+bgColorTypeenum
+ESliceBGColorType
+bottomOutsetlong
+rightOutsetlong
+Canon PowerShot S2 IS
+Adobe Photoshop Elements 4.0 Windows
+2007:01:13 19:09:01
+2007:01:10 11:58:45
+2007:01:10 11:58:45
+Copyright (c) 1998 Hewlett-Packard Company
+sRGB IEC61966-2.1
+sRGB IEC61966-2.1
+IEC http://www.iec.ch
+IEC http://www.iec.ch
+.IEC 61966-2.1 Default RGB colour space - sRGB
+.IEC 61966-2.1 Default RGB colour space - sRGB
+,Reference Viewing Condition in IEC61966-2.1
+,Reference Viewing Condition in IEC61966-2.1
+http://ns.adobe.com/xap/1.0/
+</code></pre><p>There is a link from media fire having &ldquo;iamnotreal.zip&rdquo; file , let&rsquo;s check it</p>
+<p>The zip file is protected by a password let&rsquo;s try crack it using john</p>
+<pre tabindex="0"><code>└─$  zip2john iamnotreal.zip &gt; iamnotreal.john
+Created directory: /home/kali/.john
+ver 2.0 efh 5455 efh 7875 iamnotreal.zip/evil/EVIL PKZIP Encr: TS_chk, cmplen=415382, decmplen=422982, crc=0B9A27A8 ts=982F cs=982f type=8
+</code></pre><p>&ldquo;-- wordlist = &quot; path may varies depend on its location</p>
+<pre tabindex="0"><code>└─$ john iamnotreal.john --wordlist=/usr/share/wordlists/rockyou.txt 
+
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 4 OpenMP threads
+Press &#39;q&#39; or Ctrl-C to abort, almost any other key for status
+squirrel07       (iamnotreal.zip/evil/EVIL)     
+1g 0:00:00:00 DONE (2022-03-21 11:48) 4.166g/s 5290Kp/s 5290Kc/s 5290KC/s srsrdm..solrampiche
+Use the &#34;--show&#34; option to display all of the cracked passwords reliably
+Session completed. 
+</code></pre><p>then unzip it</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">unzip</span> <span style="color:#a6e22e">iamnotreal</span>.<span style="color:#a6e22e">zip</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Archive</span><span style="color:#f92672">:</span>  <span style="color:#a6e22e">iamnotreal</span>.<span style="color:#a6e22e">zip</span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">iamnotreal</span>.<span style="color:#a6e22e">zip</span>] <span style="color:#a6e22e">evil</span><span style="color:#f92672">/</span><span style="color:#a6e22e">EVIL</span> <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">inflating</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">evil</span><span style="color:#f92672">/</span><span style="color:#a6e22e">EVIL</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">evil</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">file</span> <span style="color:#a6e22e">EVIL</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">EVIL</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>
+</span></span></code></pre></div><p>It&rsquo;s unknown data file , let&rsquo;s keep analyse it.</p>
+<p>let&rsquo;s check hex values by <code>xxd</code> , mostly already installed in linux</p>
+<p>if not use  <code>$ sudo apt install xxd</code></p>
+<pre tabindex="0"><code>└─$ xxd EVIL | more
+00000000: a119 74bc 0010 4a46 4946 0001 0101 0048  ..t...JFIF.....H
+00000010: 0048 0000 ffed 1b62 5068 6f74 6f73 686f  .H.....bPhotosho
+00000020: 7020 332e 3000 3842 494d 0425 0000 0000  p 3.0.8BIM.%....
+00000030: 0010 0000 0000 0000 0000 0000 0000 0000  ................
+00000040: 0000 3842 494d 03ed 0000 0000 0010 0048  ..8BIM.........H
+00000050: 0000 0001 0002 0048 0000 0001 0002 3842  .......H......8B
+00000060: 494d 0426 0000 0000 000e 0000 0000 0000  IM.&amp;............
+00000070: 0000 0000 3f80 0000 3842 494d 040d 0000  ....?...8BIM....
+00000080: 0000 0004 0000 001e 3842 494d 0419 0000  ........8BIM....
+00000090: 0000 0004 0000 001e 3842 494d 03f3 0000  ........8BIM....
+000000a0: 0000 0009 0000 0000 0000 0000 0100 3842  ..............8B
+000000b0: 494d 040a 0000 0000 0001 0000 3842 494d  IM..........8BIM
+000000c0: 2710 0000 0000 000a 0001 0000 0000 0000  &#39;...............
+000000d0: 0002 3842 494d 03f5 0000 0000 0048 002f  ..8BIM.......H./
+000000e0: 6666 0001 006c 6666 0006 0000 0000 0001  ff...lff........
+000000f0: 002f 6666 0001 00a1 999a 0006 0000 0000  ./ff............
+00000100: 0001 0032 0000 0001 005a 0000 0006 0000  ...2.....Z......
+00000110: 0000 0001 0035 0000 0001 002d 0000 0006  .....5.....-....
+00000120: 0000 0000 0001 3842 494d 03f8 0000 0000  ......8BIM......
+00000130: 0070 0000 ffff ffff ffff ffff ffff ffff  .p..............
+00000140: ffff ffff ffff ffff ffff 03e8 0000 0000  ................
+00000150: ffff ffff ffff ffff ffff ffff ffff ffff  ................
+00000160: ffff ffff ffff 03e8 0000 0000 ffff ffff  ................
+00000170: ffff ffff ffff ffff ffff ffff ffff ffff  ................
+00000180: ffff 03e8 0000 0000 ffff ffff ffff ffff  ................
+00000190: ffff ffff ffff ffff ffff ffff ffff 03e8  ................
+000001a0: 0000 3842 494d 0408 0000 0000 0010 0000  ..8BIM..........
+000001b0: 0001 0000 0240 0000 0240 0000 0000 3842  .....@...@....8B
+000001c0: 494d 041e 0000 0000 0004 0000 0000 3842  IM............8B
+000001d0: 494d 041a 0000 0000 034b 0000 0006 0000  IM.......K......
+000001e0: 0000 0000 0069 0000 0761 7364 0a20 0000  .....i...asd. ..
+000001f0: 696f 6e63 6676 6c2f 6b64 616c 2f6a 65bc  ioncfvl/kdal/je.
+00000200: 6166 676e 6276 696b 6d6a 6b77 7661 7362  afgnbvikmjkwvasb
+00000210: 6637 6477 2065 7320 3671 746e 7465 6b69  f7dw es 6qtnteki
+00000220: 6173 2064 7465 6577 662e 7a61 732f 6464  as dteewf.zas/dd
+00000230: 7361 732e 2e2e 2e2e 2e2e 0000 0000 0000  sas.............
+00000240: 0000 0000 0000 0000 0001 0000 0000 0000  ................
+00000250: 0000 0000 0a20 0000 0798 0000 0000 0000  ..... ..........
+00000260: 0000 0000 0000 0000 0000 0100 0000 0000  ................
+00000270: 0000 0000 0000 0000 0000 0000 0000 1000  ................
+00000280: 0000 0100 0000 0000 6874 7470 733a 2f2f  ........https://
+00000290: 7777 772e 6d65 6469 6166 6972 652e 636f  www.mediafire.co
+000002a0: 6d2f 6669 6c65 2f6d 7035 386a 6775 6770  m/file/mp58jgugp
+000002b0: 7361 6839 3667 2f69 616d 6e6f 7472 6561  sah96g/iamnotrea
+000002c0: 6c2e 7a69 702f 6669 6c65 006e 756c 6c00  l.zip/file.null.
+000002d0: 0000 0200 0000 0662 6f75 6e64 734f 626a  .......boundsObj
+000002e0: 6300 0000 0100 0000 0000 0052 6374 3100  c..........Rct1.
+000002f0: 0000 0400 0000 0054 6f70 206c 6f6e 6700  .......Top long.
+00000300: 0000 0000 0000 004c 6566 746c 6f6e 6700  .......Leftlong.
+00000310: 0000 0000 0000 0042 746f 6d6c 6f6e 6700  .......Btomlong.
+00000320: 0007 9800 0000 0052 6768 746c 6f6e 6700  .......Rghtlong.
+00000330: 000a 2000 0000 0673 6c69 6365 7356 6c4c  .. ....slicesVlL
+00000340: 7300 0000 014f 626a 6300 0000 0100 0000  s....Objc.......
+00000350: 0000 0573 6c69 6365 0000 0012 0000 0007  ...slice........
+00000360: 736c 6963 6549 446c 6f6e 6700 0000 0000  sliceIDlong.....
+00000370: 0000 0767 726f 7570 4944 6c6f 6e67 0000  ...groupIDlong..
+00000380: 0000 0000 0006 6f72 6967 696e 656e 756d  ......originenum
+--More--
+</code></pre><p>it&rsquo;s a bit complex but at the first look , there&rsquo;s &ldquo;JFIF&rdquo; seems like a file extension format.
+after searching , it&rsquo;s format for pictures but with minmal amount of data like header , let&rsquo;s check the original picture hexa just the first head line to save time</p>
+<pre tabindex="0"><code>└─$ xxd squirrel.jpg | head -n1                                                    
+00000000: ffd8 ffe0 0010 4a46 4946 0001 0101 00b4  ......JFIF......
+</code></pre><p>sounds look alike but with a little change</p>
+<p>but is missing the file signature (in the first four bytes)</p>
+<p>then let&rsquo;s try to change this header by any hex editor 
+in my case i used Ghex</p>
+<p><code> sudo apt install ghex </code></p>
+<p>and write the same header for the &ldquo;.jpg&rdquo; file instead the current header and now check the file it&rsquo;s a picture now.
+<!-- raw HTML omitted --></p>
+<p>bring the writen on the top right side to <!-- raw HTML omitted -->Cypher Chef<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+And it&rsquo;s encoded base32 string and BOOM
+The flag : <code>flag{Ev1l_S9uirr3lz}</code></p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/AhmedKAwwad/ahmedkawwad.github.io/edit/source/content/posts%5cWriteups%5csquirrel%5cindex.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/writeups/equation/" title="Equat1on writeup" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Equat1on writeup</div>
+      </a>
+    </div>
+  
+  
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://ahmedkawwad.github.io#me">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://ahmedkawwad.github.io#skills">Skills</a>
+                </li>
+              
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://ahmedkawwad.github.io#experiences">Experience</a>
+                </li>
+              
+              
+              
+              
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:a.k.awad97@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>a.k.awad97@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
