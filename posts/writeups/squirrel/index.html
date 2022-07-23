@@ -249,11 +249,37 @@
           <h1 id="zain-ctf-2022--cybertalents">Zain CTF 2022 — Cybertalents</h1>
 <p>Category: Digital Forensics</p>
 <p>Description : a picture tells a story. search for more details</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted -->Squirrel.zip<!-- raw HTML omitted --></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.button-dl {
+  border:  2px solid #008CBA;/* Blue */
+  border-radius: 9px;
+  color: black;
+  padding: 9px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 80px;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 15px 0 rgba(0,0,0,0.19);
+  }
+.button-dl:hover {
+  background-color: #008CBA; /* Blue */
+  color: white;
+}
+.button-dl:active {
+  background-color: #3e8e41;/* Green */
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+<p></style></p>
+</head>
+<body>
+<a download =Squirrel  target = "_blank" class = "button-dl" href="/files/squirrel.zip" >Squirrel.zip</a>
 <p>The download link is a zipped file containing the squirrel image above. Once unzipped, I checked the file out.</p>
 <pre tabindex="0"><code>└─$ file squirrel.jpg
 squirrel.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 180x180, segment length 16
@@ -415,9 +441,9 @@ after searching , it&rsquo;s format for pictures but with minmal amount of data 
 in my case i used Ghex</p>
 <p><code> sudo apt install ghex </code></p>
 <p>and write the same header for the &ldquo;.jpg&rdquo; file instead the current header and now check the file it&rsquo;s a picture now.
-<!-- raw HTML omitted --></p>
-<p>bring the writen on the top right side to <!-- raw HTML omitted -->Cypher Chef<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<img class = "img" src="/files/EVIL.jpeg" alt="evil squirrel"></p>
+<p>bring the writen on the top right side to <a href="https://gchq.github.io/CyberChef/">Cypher Chef</a>
+<br>
 And it&rsquo;s encoded base32 string and BOOM
 The flag : <code>flag{Ev1l_S9uirr3lz}</code></p>
 
