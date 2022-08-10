@@ -1,2 +1,1 @@
-# ahmedkawwad.github.io-
-Awwad's Blog
+# Awwad's Blog
