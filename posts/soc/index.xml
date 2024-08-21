@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SOC on Awwad&#39;s Blog</title>
+    <link>https://ahmedkawwad.github.io/posts/soc/</link>
+    <description>Recent content in SOC on Awwad&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Aug 2024 01:41:28 +0400</lastBuildDate><atom:link href="https://ahmedkawwad.github.io/posts/soc/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>What&#39;s like to be SOC Analyst</title>
+      <link>https://ahmedkawwad.github.io/posts/soc/whats-like-to-be-soc-analyst/</link>
+      <pubDate>Thu, 22 Aug 2024 01:41:28 +0400</pubDate>
+      
+      <guid>https://ahmedkawwad.github.io/posts/soc/whats-like-to-be-soc-analyst/</guid>
+      <description>Sharing Knowledge and Insights</description>
+    </item>
+    
+    
+  </channel>
+</rss>
